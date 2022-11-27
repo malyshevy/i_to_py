@@ -11,8 +11,8 @@ in_costs = float(input('Введите издержки :'))
 if in_revenue == in_costs:
     print('Фирма сработала в ноль')
 elif in_revenue > in_costs:
-    print(f'Выручка больше издержек. Соотношение прибыли к выручке = 1 к {in_revenue / (in_revenue - in_costs)}')
-    in_staff = int(input('Введите количество сотрудников'))
-    print(f'Прибыль фирмы в расчете на одного сотрудника = 1 к {(in_revenue - in_costs) / in_staff}')
+    print(f'Выручка больше издержек. Соотношение прибыли к выручке = 1 к {(in_revenue / (in_revenue - in_costs)):.2f}')
+    in_staff = int(input('Введите количество сотрудников :'))
+    print(f'Прибыль фирмы в расчете на одного сотрудника = 1 к {((in_revenue - in_costs) / in_staff):.2f}')
 else:
     print('Издержки больше выручки')
