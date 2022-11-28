@@ -4,4 +4,4 @@
 '''
 string_out = input('Введите число :')
 number_out = int(string_out) + int(string_out + string_out) + int(string_out + string_out + string_out)
-print(string_out, '+', string_out + string_out, '+', string_out + string_out + string_out, '=', number_out)
+print(f'{string_out} + {string_out + string_out} + {string_out + string_out + string_out} = {number_out}')
