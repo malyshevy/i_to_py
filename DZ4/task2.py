@@ -6,17 +6,21 @@
 '''
 from random import randint
 
+
+def generator(list_generator):
+    i = 1
+    j = 0
+    while i < len(list_generator):
+        if list_generator[j] < list_generator[i]:
+            yield list_generator[i]
+            i += 1
+            j += 1
+        else:
+            i += 1
+            j += 1
+
+
 list_generator = [randint(0, 1300) for i in range(0, 13)]
 print(list_generator)
-new_list = []
-i = 1
-j = 0
-while i < len(list_generator):
-    if list_generator[j] < list_generator[i]:
-        new_list.append(list_generator[i])
-        i += 1
-        j += 1
-    else:
-        i += 1
-        j += 1
-print(new_list)
+for k in generator(list_generator):
+    print(k)

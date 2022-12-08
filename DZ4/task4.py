@@ -7,20 +7,24 @@
 '''
 from random import randint
 
+
+def generator(list_generator):
+    for i in list_generator:
+        j = 0
+        max = 0
+        while j < len(list_generator):
+            if i == list_generator[j]:
+                max += 1
+                j += 1
+            else:
+                j += 1
+        if max > 1:
+            continue
+        else:
+            yield (i)
+
+
 list_generator = [randint(1, 15) for i in range(0, 15)]
 print(list_generator)
-new_list = []
-for i in list_generator:
-    j = 0
-    max = 0
-    while j < len(list_generator):
-        if i == list_generator[j]:
-            max += 1
-            j += 1
-        else:
-            j += 1
-    if max > 1:
-        continue
-    else:
-        new_list.append(i)
+new_list = [k for k in generator(list_generator)]
 print(new_list)
