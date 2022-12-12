@@ -6,13 +6,14 @@
 Иванов 23543.12
 Петров 13749.32
 '''
-with open('task3.txt', 'r') as f_task3:
-    size = sum(1 for _ in f_task3)
-    f_task3.seek(0)
+with open('task3.txt', 'r') as f_3:
+    size = sum(1 for _ in f_3)
+    f_3.seek(0)
     list_f_task3 = []
     i = 0
     while i < size:
-        list_f_task3.append(f_task3.readline())
+        list_f_task3.append(f_3.readline())
+        i += 1
     fio = None
     zp = None
     for i in list_f_task3:
