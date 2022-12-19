@@ -7,13 +7,14 @@
 '''
 from time import sleep
 
+
 class TrafficLight:
     __color = None
-    def running (green):
-        i=1
+
+    def running(time_green):
+        i = 1
         time_red = 7
         time_yllow = 2
-        time_green = green
         while (i > 0):
             print('Красный сигнал светофора')
             sleep(time_red)
@@ -21,6 +22,7 @@ class TrafficLight:
             sleep(time_yllow)
             print('Зелёный сигнал светофора')
             sleep(time_green)
+
 
 a = TrafficLight
 a.running(int(input('Введите длительность работы зелёного сигнала светофора :')))
