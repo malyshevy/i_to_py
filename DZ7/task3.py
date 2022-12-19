@@ -31,3 +31,5 @@ class Position(Worker):
 w = Position
 w.get_full_name()
 w.get_total_income()
+print(w.name)
+print(w.surname)
